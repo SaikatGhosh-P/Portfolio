@@ -14,7 +14,7 @@ class Footer extends StatelessWidget {
         children: [
           SocialRow(),
           Text(
-            "SaikatGhosh",
+            "SaikatGhosh-2023",
           ),
         ],
       ),

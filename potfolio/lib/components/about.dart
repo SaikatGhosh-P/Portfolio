@@ -35,13 +35,13 @@ class _AboutState extends State<About> {
                 height: 156.0,
               ),
               Text(
-                'Name',
+                'Saikat Ghosh',
                 style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w600),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "Details",
+                  "I am Passionate to work with Native and Cross Platform Android Development",
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -70,18 +70,24 @@ class _AboutState extends State<About> {
               AnimatedContact(
                 icon: FontAwesomeIcons.github,
                 title: "GitHub",
-                subtitle: "Saikat Ghosh",
+                subtitle: "Saikat-Ghosh",
                 onTap: () {},
               ),
               AnimatedContact(
-                icon: FontAwesomeIcons.github,
-                title: "GitHub",
-                subtitle: "Saikat Ghosh",
+                icon: FontAwesomeIcons.gitlab,
+                title: "GitLab",
+                subtitle: "@SaikatGhosh",
                 onTap: () {},
               ),
               AnimatedContact(
                 icon: FontAwesomeIcons.linkedin,
                 title: "LinkedIn",
+                subtitle: "Saikat Ghosh",
+                onTap: () {},
+              ),
+              AnimatedContact(
+                icon: FontAwesomeIcons.googlePlay,
+                title: "PlayStore",
                 subtitle: "Saikat Ghosh",
                 onTap: () {},
               ),

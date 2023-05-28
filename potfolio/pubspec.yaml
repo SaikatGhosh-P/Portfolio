@@ -39,7 +39,7 @@ dependencies:
   velocity_x:
   timelines: 
   font_awesome_flutter:
-
+  equatable: ^2.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter

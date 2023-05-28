@@ -2,11 +2,13 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:potfolio/Data/data_info.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:timelines/timelines.dart';
 
 class Education extends StatefulWidget {
-  const Education({super.key});
+  final List<EducationInfo> educationInfo;
+  const Education({super.key, required this.educationInfo});
 
   @override
   State<Education> createState() => _EducationState();
@@ -37,13 +39,13 @@ class _EducationState extends State<Education> {
           ),
           //
           const SizedBox(
-            height: 12.0,
+            height: 100.0,
           ),
           Timeline.tileBuilder(
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
               builder: TimelineTileBuilder.fromStyle(
-                itemCount: 4,
+                itemCount: EducationInfo.educationInfo.length,
                 contentsAlign: ContentsAlign.alternating,
                 contentsBuilder: (context, index) {
                   return Card(
@@ -53,17 +55,17 @@ class _EducationState extends State<Education> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "20 March 2014",
+                            "${EducationInfo.educationInfo[index].date}",
                             style:
                                 TextStyle(fontSize: 12.0, color: Colors.indigo),
                           ),
                           Text(
-                            "Passed 10th",
+                            "${EducationInfo.educationInfo[index].event}",
                             style: TextStyle(
                                 fontSize: 20.0, fontWeight: FontWeight.w600),
                           ),
                           Text(
-                            "10th Grade from Bagnan High School",
+                            "${EducationInfo.educationInfo[index].eventDetails}",
                             style:
                                 TextStyle(fontSize: 14.0, color: Colors.grey),
                           )

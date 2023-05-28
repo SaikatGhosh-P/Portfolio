@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:potfolio/Data/data_info.dart';
 import 'package:potfolio/components/about.dart';
 import 'package:potfolio/components/education.dart';
+import 'package:potfolio/components/experience.dart';
 import 'package:potfolio/components/footer.dart';
 import 'package:potfolio/components/skills.dart';
 
@@ -50,6 +52,8 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   Widget build(BuildContext context) {
+    EducationInfo educationInfo = EducationInfo.educationInfo[0];
+
     isMobile = MediaQuery.of(context).size.width > 700 ? false : true;
     return Scaffold(
       appBar: AppBar(
@@ -72,13 +76,14 @@ class _PortfolioState extends State<Portfolio> {
                 children: [
                   About(),
                   const SizedBox(
-                    width: 30.0,
+                    width: 10.0,
                   ),
                   Education(
-                    key: educationKey,
-                  ),
+                      key: educationKey,
+                      educationInfo: EducationInfo.educationInfo),
                 ],
               ),
+              Experience(key: experienceKey),
               Skills(
                 key: skillKey,
               ),
